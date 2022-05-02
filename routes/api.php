@@ -127,6 +127,10 @@ Route::put("/users/update/{id}", function (Request $request, $id) {
         $user->{$key} = $value;
     }
 
+    if (isset($data["password"])){
+        $user->password = Hash::make($data["password"]);
+    }
+
     $result = $user->save();
 
     return ["success" => $result, "response" => ["user" => $user]];
