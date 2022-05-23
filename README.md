@@ -19,6 +19,9 @@ Foram utilizados conceitos como:
 * Integração com API externa
 * Teste básicos com PHPUnit
 
+Comando para importar municípios usando o artisan:
+``php artisan municipios:import {uf}``
+
 Rotas da API:
 
 | Method | Route                 | Description               |
